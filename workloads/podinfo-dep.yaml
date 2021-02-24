@@ -11,6 +11,7 @@ metadata:
     fluxcd.io/tag.init: regex:^3.10.*
     fluxcd.io/tag.podinfod: semver:~3.1
 spec:
+  replicas: 1
   strategy:
     rollingUpdate:
       maxUnavailable: 0
@@ -58,6 +59,8 @@ spec:
         env:
         - name: PODINFO_UI_COLOR
           value: "#34577c"
+        - name: TUAN
+          value: "test"
         livenessProbe:
           httpGet:
             path: /healthz
