@@ -13,17 +13,16 @@ metadata:
 spec:
   releaseName: redis
   chart:
-    repository: https://charts.helm.sh/stable/
+    repository: "https://charts.bitnami.com/bitnami"
     name: redis
     version: 10.3.1
   valueFileSecrets:
     # the redis-auth secret contains the password value
     - name: redis-auth
   values:
-    usePassword: true
+    usePassword: false
     image:
-      repository: bitnami/redis
-      tag: 5.0.7
+      tag: 6.0.10-debian-10-r1
     service:
       type: ClusterIP
       port: 6379
