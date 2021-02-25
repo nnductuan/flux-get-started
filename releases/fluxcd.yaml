@@ -1,0 +1,17 @@
+apiVersion: "helm.fluxcd.io/v1"
+kind: "HelmRelease"
+metadata:
+  name: "fluxcd-prd"
+  namespace: "flux"
+  annotations:
+    fluxcd.io/automated: "false"
+spec:
+  releaseName: "fluxcd-prd"
+  chart:
+    repository: https://charts.fluxcd.io/
+    name: flux
+    version: "1.21.2"
+  values:
+    git:
+      url: 'git@github.com:nnductuan/flux-get-started'
+      secretName: "flux-ssh"
