@@ -2,7 +2,7 @@ apiVersion: "helm.fluxcd.io/v1"
 kind: "HelmRelease"
 metadata:
   name: "sentry-redis"
-  namespace: "monitoring"
+  namespace: "demo"
   annotations:
     fluxcd.io/automated: "false"
 spec:
