@@ -8,9 +8,9 @@ metadata:
 spec:
   releaseName: "fluxcd-prd"
   chart:
-    repository: https://charts.fluxcd.io/
+    repository: https://charts.fluxcd.io
     name: flux
-    version: 1.21.2
+    version: 1.6.2
   values:
     git:
       url: 'git@github.com:nnductuan/flux-get-started'
