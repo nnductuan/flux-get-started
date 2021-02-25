@@ -1,0 +1,17 @@
+apiVersion: "helm.fluxcd.io/v1"
+kind: "HelmRelease"
+metadata:
+  name: "operator-flux"
+  namespace: "flux"
+  annotations:
+    fluxcd.io/automated: "false"
+spec:
+  releaseName: "operator-flux"
+  chart:
+    repository: https://charts.fluxcd.io
+    name: helm-operator
+    version: 1.2.0
+  values:
+    allowNamespace: demo
+    helm:
+      versions: v3
